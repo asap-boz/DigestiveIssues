@@ -172,28 +172,43 @@ game.onUpdateInterval(500, function () {
 function updateTilesBasedOnColor() {
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 10; col++) {
-            // Get the tile at the current location
-            let currentTile = tiles.getTileLocation(col, row);
-            
-            // Get the image of the current tile
-            let tileImage = tiles.getTileImage(currentTile);
-
-            // Determine the tile color based on the image
-            let tileColor = tileImage.fill;
+            let tileColor = tiles.getColor(col, row);
 
             console.log("Tile Color at (" + col + ", " + row + "): " + tileColor);
 
-            // Your existing code for updating tiles based on color
-            if (tileColor === 0) {
-                tiles.setTileAt(currentTile, assets.tile`tilePath3`);
-            } else if (tileColor === 1) {
-                tiles.setTileAt(currentTile, assets.tile`tilePath1`);
-            } else if (tileColor === 2) {
-                tiles.setTileAt(currentTile, assets.tile`tilePath9`);
+            if (tileColor == 0) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`tilePath3`);
+            } else if (tileColor == 1) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`tilePath1`);
+            } else if (tileColor == 2) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`tilePath9`);
+            } else if (tileColor == 3) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`tilePath7`);
+            } else if (tileColor == 4) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 5) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 6) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 7) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 8) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 9) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 10) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 11) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 12) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 13) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 14) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
+            } else if (tileColor == 15) {
+                tiles.setTileAt(tiles.getTileLocation(col, row), assets.tile`myTile2`);
             }
-            // Add more conditions as needed
         }
     }
 }
-
-

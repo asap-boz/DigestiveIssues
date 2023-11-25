@@ -2,7 +2,8 @@
     "name": "ping!",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "color-coded-tilemap": "*"
     },
     "files": [
         "main.ts",
